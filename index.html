@@ -21,7 +21,7 @@
             Mostrar modal
         </button>
 
-        <div class="modal-shadow modal--disabled" id="modal">
+        <section class="modal-shadow modal--disabled" id="modal">
             <div class="modal__content">
                 <div class="modal__header">
                     <h2 class="modal__title">Creación de grado</h2>
@@ -31,6 +31,13 @@
                     </button>
                 </div>
                 <div class="modal__body">
+                    <div class="modal__multimedia">
+                        <img
+                            src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="Imagen programacion"
+                            title="Imagen de programacion"
+                        />
+                    </div>
                     <form>
                         <p class="modal__text">
                             Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -40,14 +47,24 @@
                             suscipit perferendis illum tempore?
                         </p>
                         <div class="field">
-                            <label for="nombre" class="modal__text-title">
+                            <label
+                                for="nombre"
+                                class="modal__text-title"
+                                aria-labelledby="nombre"
+                                aria-label="Nombre"
+                            >
                                 Nombre
                             </label>
                             <input type="text" placeholder="nombre" />
                         </div>
 
                         <div class="field">
-                            <label for="grado" class="modal__text-title">
+                            <label
+                                for="grado"
+                                class="modal__text-title"
+                                aria-labelledby="grado"
+                                aria-label="Grado"
+                            >
                                 Grado
                             </label>
                             <select name="" id="grado">
@@ -60,7 +77,12 @@
                         </div>
 
                         <div class="field">
-                            <label for="mensaje" class="modal__text-title">
+                            <label
+                                for="mensaje"
+                                class="modal__text-title"
+                                aria-labelledby="mensaje"
+                                aria-label="Mensaje"
+                            >
                                 Mensaje:
                             </label>
                             <textarea
@@ -80,6 +102,8 @@
                                         <label
                                             for="html"
                                             class="input-checkbox"
+                                            aria-labelledby="html"
+                                            aria-label="html"
                                         >
                                             <input id="html" type="checkbox" />
                                             html
@@ -89,7 +113,12 @@
 
                                 <div class="modal-selection__select">
                                     <div class="field">
-                                        <label for="css" class="input-checkbox">
+                                        <label
+                                            for="css"
+                                            class="input-checkbox"
+                                            aria-labelledby="css"
+                                            aria-label="css"
+                                        >
                                             <input id="css" type="checkbox" />
                                             css
                                         </label>
@@ -101,17 +130,24 @@
                 </div>
                 <div class="modal__footer">
                     <div class="button-group">
-                        <button class="button button__success">
+                        <button
+                            class="button button__success"
+                            aria-label="crear"
+                        >
                             Crear
                         </button>
 
-                        <button class="button button__danger" id="exit-modal">
+                        <button
+                            class="button button__danger"
+                            id="exit-modal"
+                            aria-label="salir"
+                        >
                             Salir
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <script
             src="https://kit.fontawesome.com/7d7cc578e0.js"
             crossorigin="anonymous"

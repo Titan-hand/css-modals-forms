@@ -17,6 +17,7 @@
 	-------- label inside of .field container -------- 
 */
 .field > label {
+    font-size: 90%;
     display: block;
     margin-bottom: 10px;
 }

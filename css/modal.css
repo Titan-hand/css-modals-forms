@@ -84,6 +84,20 @@
 }
 
 /*
+	-------- Modal img container -------- 
+*/
+.modal__multimedia img,
+.modal__multimedia video,
+.modal__multimedia figure,
+.modal__multimedia picture {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+/*
 	-------- Modal text content-------- 
 */
 .modal__text {
@@ -97,33 +111,29 @@
 .modal__footer {
 }
 
-
 /*
 	-------- Modal multiple selects  -------- 
 */
-.modal-selection{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+.modal-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
-
 
 /*
 	-------- Modal selection children -------- 
 */
-.modal-selection > .modal-selection__select:not(:last-child){
-	margin-right: 1rem;
+.modal-selection > .modal-selection__select:not(:last-child) {
+    margin-right: 1rem;
 }
-
 
 /*
 	-------- Modal the title of sections -------- 
 */
-.modal__text-title{
-	margin-bottom: 1rem;
-	font-weight: 700;
+.modal__text-title {
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
-
 
 /*
 	-------- Displays modal -------- 
@@ -138,8 +148,8 @@
     z-index: -1; /*para que no bloquee los demas elementos del DOM*/
 }
 
-@media screen and (max-width: 480px){
-    .modal-shadow{
+@media screen and (max-width: 480px) {
+    .modal-shadow {
         padding: 0;
     }
 
@@ -148,21 +158,21 @@
         width: 100%;
     }
 
-    .modal__content{
+    .modal__content {
         width: 100%;
         min-height: 100%;
         border-radius: 0;
     }
 
-    .button-group{
+    .button-group {
         flex-direction: column;
     }
-    
-    body .button-group > .button:not(:last-child){
+
+    body .button-group > .button:not(:last-child) {
         margin-right: 0;
     }
-    
-    .button-group > .button{
-        margin: .5rem 0;
+
+    .button-group > .button {
+        margin: 0.5rem 0;
     }
 }
