@@ -9,7 +9,7 @@
 
   "scripts": {
    "build": "webpack --mode production",
-   "builddev": "webpack --mode development"
+   "builddev": "webpack --watch --mode development"
  },
 
   "repository": {
