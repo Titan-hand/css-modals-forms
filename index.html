@@ -92,9 +92,10 @@
                             ></textarea>
                         </div>
 
+                        <!-- ===== inline checkbox ===== -->
                         <div class="field">
                             <strong class="modal__text-title">
-                                ¿Qué manejas?
+                                ¿Qué manejas? - inline
                             </strong>
                             <div class="modal-selection">
                                 <div class="modal-selection__select">
@@ -126,6 +127,40 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- ===== column checkbox =====  -->
+                        <div class="field">
+                            <strong class="modal__text-title">
+                                ¿Qué manejas? - column
+                            </strong>
+                            <label
+                                for="html5"
+                                class="input-checkbox"
+                                aria-labelledby="html5"
+                                aria-label="html5"
+                            >
+                                <input id="html5" type="checkbox" />
+                                html5
+                            </label>
+                                    
+                            <label
+                                for="css3"
+                                class="input-checkbox"
+                                aria-labelledby="css3"
+                                aria-label="css3"
+                            >
+                                <input id="css3" type="checkbox" />
+                                css3
+                            </label>
+                        </div>
+                        <!-- ===== input range ===== -->
+                        <div class="field"> 
+                            <strong>Cantidad:</strong>
+
+                            <label for="cantidad" class="input-range">
+                                <input type="range" min="1" max="10" name="cantidad">
+                            </label>
+                        </div>
+
                     </form>
                 </div>
                 <div class="modal__footer">
@@ -152,6 +187,6 @@
             src="https://kit.fontawesome.com/7d7cc578e0.js"
             crossorigin="anonymous"
         ></script>
-        <script src="js/modal.js"></script>
+        <script src="./js/index.mjs" type="module"></script>
     </body>
 </html>

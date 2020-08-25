@@ -24,16 +24,17 @@ const assing_func = (element) => {
     element.addEventListener("click", show_modal, false);
 };
 
-window.addEventListener(
-    "load",
-    (event) => {
-        const btn_show_modal = getNode("show-modal");
-        const btn_hide_modal = getNode("close-modal");
-        const btn_exit_modal = getNode("exit-modal");
+const initModal = () => {
+    const btn_show_modal = getNode("show-modal");
+    const btn_hide_modal = getNode("close-modal");
+    const btn_exit_modal = getNode("exit-modal");
 
-        assing_func(btn_show_modal);
-        assing_func(btn_hide_modal);
-        assing_func(btn_exit_modal);
-    },
-    false
-);
+    assing_func(btn_show_modal);
+    assing_func(btn_hide_modal);
+    assing_func(btn_exit_modal);
+}
+
+
+export {
+    initModal
+}

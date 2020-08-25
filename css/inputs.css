@@ -29,7 +29,7 @@
 .field > select,
 .field > textarea {
     border: 1px solid rgba(0, 0, 0, 0.315);
-    padding: .8rem;
+    padding: .7rem;
     display: block;
     width: 100%;
     outline: none;
@@ -68,8 +68,16 @@
 	-------- input type range in container -------- 
 */
 .field > .input-range {
-    position: relative;
-    margin: 3px 0 9px 0;
+    display: flex;
+    margin: .5rem 0;
+}
+
+/* 
+    -------- the range input --------
+*/
+.field input[type="range"]{
+    padding: 0;
+    width: 100%;
 }
 
 /*
@@ -78,9 +86,11 @@
 .input-range-toolTip {
     text-align: center;
     font-size: 1rem;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 20px;
+    padding: 3px;
+    width: 50px;
+    font-weight: 600;
+    border-radius: 3px;
+    color: black;
+    background: #e4e4e4;
+    margin-left: 10px;
 }
