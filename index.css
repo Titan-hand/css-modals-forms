@@ -1,73 +1,216 @@
-*{
-	padding: 0;
-	margin: 0;	
-	box-sizing: border-box;
-	margin-block-start: 0;
-	margin-block-end :0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: "Open Sans", sans-serif;
+    color: rgba(0, 0, 0, 0.767);
 }
 
-.modal-shadow{
-	position: fixed;
-	background: #0000004f;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 30px 0;
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+/*
+	-------- Modal commons styles -------- 
+*/
+
+.modal__footer,
+.modal__header {
+    display: flex;
+    align-items: flex-start;
+}
+
+/*
+	-------- Modal shadow -------- 
+*/
+.modal-shadow {
+    position: fixed;
+    background: #0000004f;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-	overflow: auto;
+    overflow: auto;
+    transition: all 0.2s ease;
 }
 
-.modal__content{
-	/*width: 300px;*/
-	background: white;
-	padding: 30px;
+/*
+	-------- Modal content body -------- 
+*/
+.modal__content {
+    background: white;
+    padding: 2.5rem;
+    width: 650px;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.123);
 }
 
+/*
+	-------- Modal header with titles -------- 
+*/
+.modal__header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5em;
+}
 
-/*.fieldset{
-	border-radius: 5px;
-	padding: .5rem;
-	border: 1px solid gray;
-}*/
+/*
+	-------- Modal header close button -------- 
+*/
+.modal__button-close {
+    margin-left: auto;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 
-/* ================================================ */
+.modal__button-close i {
+    transition: all 0.1s ease;
+}
 
-.field{
-	/*background: red;*/
-	border-radius: 5px;
-	padding: .5rem;
-	margin: .7rem 0;
+.modal__button-close:hover i {
+    color: black;
+    font-size: 1.7rem;
+}
+
+/*
+	-------- Modal title -------- 
+*/
+.mode__title {
+}
+
+/*
+	-------- Modal text content-------- 
+*/
+.modal__text {
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/*
+	-------- Modal footer -------- 
+*/
+.modal__footer {
+}
+
+.modal-selection{
 	display: flex;
-	flex-direction: column;	
-	/*border: 1px solid gray;*/
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
-.field input{
-	display: block;
+.modal-selection > .modal-selection__select:not(:last-child){
+	margin-right: 1rem;
+}
+
+.modal__text-title{
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+/*
+	-------- Buttons -------- 
+*/
+.button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.1s ease;
+    font-size: 12px;
+}
+
+.button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.button__success {
+    background-color: #158467;
+    box-shadow: 0 4px 0 2px #065446;
+}
+
+.button__danger {
+    background-color: #d54062;
+    box-shadow: 0 4px 0 2px #c82249;
+}
+
+/*
+	-------- Buttons group -------- 
+*/
+.button-group{
+	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
-	border: 0;
-	outline: none;
-	padding: .5rem;
-	border: 1px solid gray;
-	border-radius: 5px;
 }
 
-.field select{
-	display: block;
-	width: 100%;
-	border: 0;
-	outline: none;
-	padding: .5rem;
-	border: 1px solid gray;
-	border-radius: 5px;
+.button-group > .button{
+	flex: 1 1 auto;
 }
 
-.field textarea{
-	max-width: 100%;
-	min-width: 100%;
+.button-group > .button:not(:last-child) {
+    margin-right: 10px;
+}
+
+/*
+	-------- Displays modal -------- 
+*/
+.modal--active {
+    opacity: 1;
+    display: flex;
+}
+
+.modal--disabled {
+    opacity: 0;
+    z-index: -1; /*para que no bloquee los demas elementos del DOM*/
+}
+
+.field {
+    border-radius: 5px;
+    margin: 0.8rem 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.field > input,
+.field > select,
+.field > textarea {
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    padding: 1rem 0.7rem;
+    display: block;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+}
+
+.field > label {
+    margin-bottom: 10px;
+}
+
+.field textarea {
+    max-width: 100%;
+    min-width: 100%;
     min-height: 80px;
 }
-

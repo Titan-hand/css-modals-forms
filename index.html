@@ -1,62 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>css forms</title>
-	<link rel="stylesheet" type="text/css" href="./index.css" />
-</head>
-<body>
-	<h1>hola</h1>
-	<div class="modal-shadow">
-		<div class="modal__content">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css forms</title>
+        <link rel="stylesheet" type="text/css" href="./index.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <h1>Ejemplo de modal con vanilla javascript y css</h1>
 
-			<div class="modal__header">
-				
-			</div>
-			<div class="modal__body">
-				<form>
-					<div class="field">
-						<input type="text" placeholder="nombre" class="">
-					</div>
+        <button class="button button__success" id="show-modal">
+            Mostrar modal
+        </button>
 
-					<div class="field">
-						<label for="nombre">Nombre:</label>
-						<select name="" id="nombre">
-							<option value="">1</option>
-							<option value="">2</option>
-							<option value="">3</option>
-							<option value="">4</option>
-							<option value="">5</option>
-						</select>				
-					</div>
+        <div class="modal-shadow modal--disabled" id="modal">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h2 class="modal__title">Creación de grado</h2>
 
-					<div class="field">
-						<label for="mensaje">Mensaje:</label>
-						<textarea placeholder="mensaje" name="mensaje" id="mensaje"></textarea>
-					</div>
+                    <button class="modal__button-close" id="close-modal">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal__body">
+                    <form>
+                        <p class="modal__text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Voluptatum debitis animi, voluptas minima
+                            distinctio atque quos vel officia, similique in
+                            quibusdam deserunt esse at soluta accusantium
+                            suscipit perferendis illum tempore?
+                        </p>
+                        <div class="field">
+                            <label for="nombre" class="modal__text-title"
+                                >Nombre</label
+                            >
+                            <input type="text" placeholder="nombre" />
+                        </div>
 
-					<div class="field">
-						<span>
-							<label for="html">html</label>
-							<input id="html" type="checkbox">
-						</span>
-						<span>
-							<label for="css">css</label>
-							<input id="css" type="checkbox">
-						</span>
-					</div>
-					
-				</form>
-			</div>
-			<div class="modal__footer">
-				
-			</div>
-		</div>
-	</div>
-	<script>
+                        <div class="field">
+                            <label for="grado" class="modal__text-title"
+                                >Grado:</label
+                            >
+                            <select name="" id="grado">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
 
-	</script>
-	<script src="./index.js"></script>
-</body>
+                        <div class="field">
+                            <label for="mensaje" class="modal__text-title"
+                                >Mensaje:</label
+                            >
+                            <textarea
+                                placeholder="mensaje"
+                                name="mensaje"
+                                id="mensaje"
+                            ></textarea>
+                        </div>
+
+                        <div class="field">
+                            <strong class="modal__text-title"
+                                >¿Qué manejas?</strong
+                            >
+                            <div class="modal-selection">
+                                <div class="modal-selection__select">
+                                    <label for="html">html</label>
+                                    <input id="html" type="checkbox" />
+                                </div>
+
+                                <div class="modal-selection__select">
+                                    <label for="css">css</label>
+                                    <input id="css" type="checkbox" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__footer">
+                    <div class="button-group">
+                        <button class="button button__success">
+                            Crear
+                        </button>
+
+                        <button class="button button__danger" id="exit-modal">
+                            Salir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://kit.fontawesome.com/7d7cc578e0.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./index.js"></script>
+    </body>
 </html>
