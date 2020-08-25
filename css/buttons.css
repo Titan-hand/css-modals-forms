@@ -1,0 +1,48 @@
+/*
+	-------- Buttons -------- 
+*/
+.button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.1s ease;
+    font-size: 12px;
+}
+
+.button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.button__success {
+    background-color: #158467;
+    box-shadow: 0 4px 0 2px #065446;
+}
+
+.button__danger {
+    background-color: #d54062;
+    box-shadow: 0 4px 0 2px #c82249;
+}
+
+/*
+	-------- Buttons group -------- 
+*/
+.button-group{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.button-group > .button{
+	flex: 1 1 auto;
+}
+
+.button-group > .button:not(:last-child) {
+    margin-right: 10px;
+}

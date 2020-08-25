@@ -1,13 +1,21 @@
 const getNode = (id) => document.getElementById(id);
 
 const show_modal = () => {
+    // check if the modal is active in the window
     const modal = getNode("modal");
+    if (!modal) {
+        throw new ReferenceError(
+            `\n\n⚠️ The container ´#modal´don't exist in the DOM.\n`,
+            "color: red;"
+        );
+    }
     if (modal.classList.contains("modal--active")) {
         modal.classList.remove("modal--active");
         modal.classList.add("modal--disabled");
         return;
     }
 
+    // if it is active, disable the modal
     modal.classList.remove("modal--disabled");
     modal.classList.add("modal--active");
 };

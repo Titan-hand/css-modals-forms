@@ -1,0 +1,85 @@
+/*
+	-------- a container input -------- 
+*/
+.field {
+    border-radius: 5px;
+    margin: 0.7rem 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.field .field {
+    margin: 0;
+}
+
+/*
+	-------- label inside of .field container -------- 
+*/
+.field > label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*
+	-------- inputs styles inside of .field container -------- 
+*/
+.field > input,
+.field > select,
+.field > textarea {
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    padding: .8rem;
+    display: block;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+}
+
+/*
+	-------- set maximum width and height -------- 
+*/
+.field textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 80px;
+}
+
+/*
+	-------- labels styles inside of .field container -------- 
+*/
+.field > .input-checkbox,
+.field > .input-radio {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+}
+
+/*
+	-------- input checkboxes and radio styles inside labels -------- 
+*/
+.input-checkbox > input[type="checkbox"],
+.input-radio > input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/*
+	-------- input type range in container -------- 
+*/
+.field > .input-range {
+    position: relative;
+    margin: 3px 0 9px 0;
+}
+
+/*
+	-------- value description of range -------- 
+*/
+.input-range-toolTip {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
+}

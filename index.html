@@ -4,7 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>css forms</title>
-        <link rel="stylesheet" type="text/css" href="./index.css" />
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/modal.css" />
+        <link rel="stylesheet" type="text/css" href="css/buttons.css" />
+        <link rel="stylesheet" type="text/css" href="css/inputs.css" />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
             rel="stylesheet"
@@ -36,16 +40,16 @@
                             suscipit perferendis illum tempore?
                         </p>
                         <div class="field">
-                            <label for="nombre" class="modal__text-title"
-                                >Nombre</label
-                            >
+                            <label for="nombre" class="modal__text-title">
+                                Nombre
+                            </label>
                             <input type="text" placeholder="nombre" />
                         </div>
 
                         <div class="field">
-                            <label for="grado" class="modal__text-title"
-                                >Grado:</label
-                            >
+                            <label for="grado" class="modal__text-title">
+                                Grado
+                            </label>
                             <select name="" id="grado">
                                 <option value="">1</option>
                                 <option value="">2</option>
@@ -56,9 +60,9 @@
                         </div>
 
                         <div class="field">
-                            <label for="mensaje" class="modal__text-title"
-                                >Mensaje:</label
-                            >
+                            <label for="mensaje" class="modal__text-title">
+                                Mensaje:
+                            </label>
                             <textarea
                                 placeholder="mensaje"
                                 name="mensaje"
@@ -67,18 +71,29 @@
                         </div>
 
                         <div class="field">
-                            <strong class="modal__text-title"
-                                >¿Qué manejas?</strong
-                            >
+                            <strong class="modal__text-title">
+                                ¿Qué manejas?
+                            </strong>
                             <div class="modal-selection">
                                 <div class="modal-selection__select">
-                                    <label for="html">html</label>
-                                    <input id="html" type="checkbox" />
+                                    <div class="field">
+                                        <label
+                                            for="html"
+                                            class="input-checkbox"
+                                        >
+                                            <input id="html" type="checkbox" />
+                                            html
+                                        </label>
+                                    </div>
                                 </div>
 
                                 <div class="modal-selection__select">
-                                    <label for="css">css</label>
-                                    <input id="css" type="checkbox" />
+                                    <div class="field">
+                                        <label for="css" class="input-checkbox">
+                                            <input id="css" type="checkbox" />
+                                            css
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -101,6 +116,6 @@
             src="https://kit.fontawesome.com/7d7cc578e0.js"
             crossorigin="anonymous"
         ></script>
-        <script src="./index.js"></script>
+        <script src="js/modal.js"></script>
     </body>
 </html>
