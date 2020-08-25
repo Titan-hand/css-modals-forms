@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/buttons.css" />
     <link rel="stylesheet" type="text/css" href="css/inputs.css" />
     <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/loader.css" />
     <link rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
@@ -18,7 +19,23 @@
   <body>
     <div class="container">
       <div class="content">
-        <h1>Ejemplo de modal con vanilla javascript y css</h1>
+        <h1 class="title">Ejemplo de modal con vanilla javascript y css</h1>
+        <p class="desc">
+          Debes de esperar a que la ventana se cargue por completo, eso incluye
+          <br />
+          scripts, hojas de estilos, imagenes, iframes y cualquier elemento
+          externo.
+        </p>
+
+        <div class="loading" id="loader">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <strong>Cargando... </strong>
+        </div>
 
         <div class="button-group">
           <button class="button button__success" data-modal="modal1">
