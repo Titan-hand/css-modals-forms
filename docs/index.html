@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./docs.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <title>HSF | Hyper Simple Form</title>
+  </head>
+  <body>
+
+    <div class="docs-container">
+      <h1 class="doc-title">Simple css class names for inputs</h1>
+        <div class="doc">
+          <div class="doc-subtitle"><b>.field</b> Always put inputs inside it</div>
+          <div class="doc-text">
+            this is like the <b>.form-control</b> in bootstrap or the <b>.field</b> in bulma css. You can put in all kind of inputs
+          </div>
+        </div>
+
+        <!-- ========================================== text and number inputs ============================= -->
+        <div class="doc">
+          <div class="doc-subtitle">Example with text and number inputs.</div>
+          <div class="example">
+            <form>
+              <!-- normal input -->
+    					<div class="field">
+    						<label for="name">Name:</label>
+    						<input type="text" placeholder="name" name="name">
+    					</div>
+
+              <!-- input number -->
+    					<div class="field">
+    						<label for="age">age</label>
+    						<input type="number" name="age">
+    					</div>
+            </form>
+
+            <div class="example-code">
+<pre>
+<code class="language-html">
+<form>
+    <!-- normal input -->
+	  <div class="field">
+	    <label for="name">Name:</label>
+	    <input type="text" placeholder="name" name="name">
+	  </div>
+
+    <!-- input number -->
+	  <div class="field">
+	    <label for="age">age</label>
+	    <input type="number" name="age">
+	  </div>
+</form>
+</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================== radio, range and checkbox inputs ===================================== -->
+        <div class="doc">
+          <div class="doc-subtitle"><b>.input-radio</b> <br> <b>.input-range</b> <br> <b>.input-checkbox</b> <br> For inputs of type radio, range and checkbox.</div>
+          <div class="doc-text">
+            With this types of inputs you have to put in inside a <b>label</b> tag with the correspond class name.
+          </div>
+<pre>
+<code class="language-html">
+<form>
+    <div class="field">
+      <label class="input-checkbox" for="box">
+        <input type="checkbox" name="box" value="box">
+        I'm a checkbox
+      </label>
+    </div>
+</form>
+</code>
+</pre>
+        </div>
+
+        <div class="doc">
+          <div class="doc-subtitle">Example with inputs of type radio, range and checkbox.</div>
+          <div class="example">
+            <form>
+              <!-- checkboxs -->
+    					<div class="field">
+    						<label>Select all the tecnologies that you know:</label>
+    							<label for="html" class="input-checkbox">
+    								<input id="html" type="checkbox" value="html" checked>
+    								html
+    							</label>
+
+    							<label for="javascript" class="input-checkbox">
+    								<input id="javascript" type="checkbox" value="javascript">
+    								javascript
+    							</label>
+
+    							<label for="css" class="input-checkbox">
+    								<input id="css" type="checkbox" value="css">
+    								css
+    							</label>
+    					</div>
+
+    					<!-- input radio -->
+    					<div class="field">
+    						<label>Select gender:</label>
+    							<label for="female" class="input-radio">
+    								<input id="female" type="radio" value="female" name="gender" checked>
+    								female
+    							</label>
+
+    							<label for="male" class="input-radio">
+    								<input id="male" type="radio" value="male" name="gender">
+    								male
+    							</label>
+    					</div>
+
+    					<!-- input range -->
+    					<div class="field">
+    						<label for="range" class="input-range">
+    							Select a number in the range:
+    							<input type="range" id="range" name="range" min="1" max="10">
+    						</label>
+    					</div>
+            </form>
+
+            <div class="example-code">
+<pre>
+<code class="language-html">
+  <form>
+    <!-- checkboxs -->
+    <div class="field">
+      <label>Select all the tecnologies that you know:</label>
+        <!-- checkbox 1 -->
+        <label class="input-checkbox" for="html">
+          <input id="html" type="checkbox" value="html" checked>
+          html
+        </label>
+        <!-- checkbox 2 -->
+        <label class="input-checkbox" for="javascript">
+          <input id="javascript" type="checkbox" value="javascript">
+          javascript
+        </label>
+        <!-- checkbox 3 -->
+        <label class="input-checkbox" for="css">
+          <input id="css" type="checkbox" value="css">
+          css
+        </label>
+    </div>
+
+    <!-- input radio -->
+    <div class="field">
+      <label>Select gender:</label>
+        <label class="input-radio" for="female">
+          <input id="female" type="radio" value="female" name="gender" checked>
+          female
+        </label>
+
+        <label class="input-radio" for="male">
+          <input id="male" type="radio" value="male" name="gender">
+          male
+        </label>
+    </div>
+
+    <!-- input range -->
+    <div class="field">
+      <label class="input-range" for="range">
+        Select a number in the range:
+        <input type="range" id="range" name="range" min="1" max="10">
+      </label>
+    </div>
+  </form>
+</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================== textarea and select ===================================== -->
+        <div class="doc">
+          <div class="doc-subtitle"><b>textarea</b> and <b>select</b></div>
+          <div class="doc-text">
+            This tags are very simple, just put in inside a <b>.field</b> container.
+          </div>
+
+          <div class="example">
+            <form>
+              <!-- select -->
+              <div class="field">
+                <label for="mySelect">Select:</label>
+                <select name="" id="mySelect">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </div>
+
+              <!-- textarea -->
+              <div class="field">
+                <label for="message">Message:</label>
+                <textarea placeholder="message" name="message" id="message"></textarea>
+              </div>
+            </form>
+          </div>
+
+<pre>
+<code class="language-html">
+<form>
+  <!-- select -->
+  <div class="field">
+    <label for="mySelect">Select:</label>
+    <select name="" id="mySelect">
+      <option value="">1</option>
+      <option value="">2</option>
+      <option value="">3</option>
+      <option value="">4</option>
+      <option value="">5</option>
+    </select>
+  </div>
+
+  <!-- textarea -->
+  <div class="field">
+    <label for="message">Message:</label>
+    <textarea placeholder="message" name="message" id="message"></textarea>
+  </div>
+</form>
+</code>
+</pre>
+
+
+        </div>
+
+
+
+    </div>
+
+
+  <script type="text/javascript">
+    // replace < and > in code examples for highlight
+    document.querySelectorAll("code").forEach(function(element) {
+    element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  });
+  </script>
+  <script type="text/javascript">
+  // little scripts for functionalities
+  const putRangeTooltip = ({target}, container) => {
+    const { value } = target;
+    const toolTip = container.querySelector('.input-range-toolTip');
+    if(toolTip){
+      toolTip.textContent = value;
+    }else{
+        const div = document.createElement('div');
+        div.classList.add('input-range-toolTip');
+        div.textContent = value;
+        container.append(div);
+    }
+
+  }
+
+  const inputContainerRanges = [...document.querySelectorAll('.input-range')];
+  inputContainerRanges.forEach( container => {
+    const input = container.querySelector('input[type=range]');
+    input.addEventListener('input', (ev) => putRangeTooltip(ev, container));
+  })
+  </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
