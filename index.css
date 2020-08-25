@@ -1,149 +1,216 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	margin-block-start: 0;
-	margin-block-end :0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: "Open Sans", sans-serif;
+    color: rgba(0, 0, 0, 0.767);
 }
 
-/* solo de prueba, la tipografia */
-html{
-	font-family: helvetica;
+html {
+    width: 100%;
+    height: 100%;
 }
 
-/* modal container */
-.modal-shadow{
-	position: fixed;
-	background: #0000008c;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 30px 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-	overflow: auto;
+body {
+    width: 100%;
+    min-height: 100%;
 }
 
-/* modal content (header, body and footer of modal) */
-.modal__content{
-	/*width: 300px;*/
-	width: 70%;
-	background: white;
-	padding: 2rem;
-	border-radius: 5px;
-}
-
-/* ============================================ */
-/* | 					modal header and footer				 	| */
-/* ============================================ */
-.modal__header,
-.modal__footer{
-	padding: 1rem 0;
-	display: flex;
-	flex-direction: column;
-}
-
-.modal__header hr.modal__header-hr {
-    margin-top: .2rem;
-}
-
-.modal__footer hr.modal__footer-hr {
-    margin-bottom: .2rem;
-}
-
-
-/* ============================================ */
-/* | forms fields like bootstrap form-control | */
-/* ============================================ */
-
-.field{
-	/*background: red;*/
-	border-radius: 5px;
-	padding: .5rem 0;
-	margin: .7rem 0;
-	display: flex;
-	flex-direction: column;
-	/*border: 1px solid gray;*/
-}
-
-.field label{
-	margin-bottom: .5rem;
-}
-
-.field input{
-	display: block;
-	width: 100%;
-	border: 0;
-	outline: none;
-	padding: .5rem;
-	border: 1px solid gray;
-	border-radius: 5px;
-}
-
-.field select{
-	display: block;
-	width: 100%;
-	border: 0;
-	outline: none;
-	padding: .5rem;
-	border: 1px solid gray;
-	border-radius: 5px;
-}
-
-.field textarea{
-	max-width: 100%;
-	min-width: 100%;
-  min-height: 80px;
-	padding: .5rem;
-}
-
-/* special case for checkbox and radio */
 /*
-<div class="field">
-		<label for="html" class="input-checkbox">
-			<input id="html" type="checkbox">
-			html
-		</label>
-
-		<label for="css" class="input-checkbox">
-			<input id="css" type="checkbox">
-			css
-		</label>
-</div>
+	-------- Modal commons styles --------
 */
-.field label.input-checkbox,
-.field label.input-radio{
+
+.modal__footer,
+.modal__header {
+    display: flex;
+    align-items: flex-start;
+}
+
+/*
+	-------- Modal shadow --------
+*/
+.modal-shadow {
+    position: fixed;
+    background: #0000004f;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+    transition: all 0.2s ease;
+}
+
+/*
+	-------- Modal content body --------
+*/
+.modal__content {
+    background: white;
+    padding: 2.5rem;
+    width: 650px;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.123);
+}
+
+/*
+	-------- Modal header with titles --------
+*/
+.modal__header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5em;
+}
+
+/*
+	-------- Modal header close button --------
+*/
+.modal__button-close {
+    margin-left: auto;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal__button-close i {
+    transition: all 0.1s ease;
+}
+
+.modal__button-close:hover i {
+    color: black;
+    font-size: 1.7rem;
+}
+
+/*
+	-------- Modal title --------
+*/
+.mode__title {
+}
+
+/*
+	-------- Modal text content--------
+*/
+.modal__text {
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/*
+	-------- Modal footer --------
+*/
+.modal__footer {
+}
+
+.modal-selection{
 	display: flex;
-	align-items: center;
-	padding: 2px 0;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
-	.field input[type="checkbox"],
-	.field input[type="radio"]{
-		width: auto;
-		margin-right: .3rem;
-	}
-
-/* input range */
-.field label.input-range{
-	position: relative;
-	/* background: red; */
-	margin: 3px 0 9px 0;
+.modal-selection > .modal-selection__select:not(:last-child){
+	margin-right: 1rem;
 }
 
-	.field input[type="range"]{
-		padding: 0;
-	}
+.modal__text-title{
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
 
-	.input-range-toolTip{
-		/* background: green; */
-		text-align: center;
-		font-size: 1rem;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		height: 20px;
-	}
+/*
+	-------- Buttons --------
+*/
+.button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.1s ease;
+    font-size: 12px;
+}
+
+.button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.button__success {
+    background-color: #158467;
+    box-shadow: 0 4px 0 2px #065446;
+}
+
+.button__danger {
+    background-color: #d54062;
+    box-shadow: 0 4px 0 2px #c82249;
+}
+
+/*
+	-------- Buttons group --------
+*/
+.button-group{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.button-group > .button{
+	flex: 1 1 auto;
+}
+
+.button-group > .button:not(:last-child) {
+    margin-right: 10px;
+}
+
+/*
+	-------- Displays modal --------
+*/
+.modal--active {
+    opacity: 1;
+    display: flex;
+}
+
+.modal--disabled {
+    opacity: 0;
+    z-index: -1; /*para que no bloquee los demas elementos del DOM*/
+}
+
+.field {
+    border-radius: 5px;
+    margin: 0.8rem 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.field > input,
+.field > select,
+.field > textarea {
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    padding: 1rem 0.7rem;
+    display: block;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+}
+
+.field > label {
+    margin-bottom: 10px;
+}
+
+.field textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 80px;
+}
