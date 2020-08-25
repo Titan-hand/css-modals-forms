@@ -86,15 +86,25 @@
 /*
 	-------- Modal img container -------- 
 */
+.modal__multimedia{
+    position: relative;
+    width: 100%;
+}
+
 .modal__multimedia img,
 .modal__multimedia video,
 .modal__multimedia figure,
-.modal__multimedia picture {
+.modal__multimedia picture,
+.modal__multimedia iframe {
     width: 100%;
     max-width: 100%;
     display: block;
     margin-bottom: 1rem;
     border-radius: 5px;
+}
+
+.modal__multimedia iframe{
+    min-height: 400px;
 }
 
 /*

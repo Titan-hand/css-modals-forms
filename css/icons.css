@@ -1,0 +1,13 @@
+.button__icon,
+.title-icon {
+  margin-right: 5px;
+}
+
+.button__icon {
+  color: #fff;
+  font-size: 12px;
+}
+
+.title-icon {
+  font-size: inherit;
+}

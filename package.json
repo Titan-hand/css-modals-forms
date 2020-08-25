@@ -1,0 +1,30 @@
+{
+  "name": "css-modals-forms",
+  "version": "1.0.0",
+  "description": "css for modals and especially for forms",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+
+  "scripts": {
+   "build": "webpack --mode production",
+   "builddev": "webpack --mode development"
+ },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Titan-hand/css-modals-forms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Titan-hand/css-modals-forms/issues"
+  },
+  "homepage": "https://github.com/Titan-hand/css-modals-forms#readme",
+  "dependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

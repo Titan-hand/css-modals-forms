@@ -1,40 +1,22 @@
-const getNode = (id) => document.getElementById(id);
+// utils
+import getNode from "./utils/get_id";
+import toggle_modal from "./utils/toggle_modal";
 
-const show_modal = () => {
-    // check if the modal is active in the window
-    const modal = getNode("modal");
-    if (!modal) {
-        throw new ReferenceError(
-            `\n\n⚠️ The container ´#modal´don't exist in the DOM.\n`,
-            "color: red;"
-        );
-    }
-    if (modal.classList.contains("modal--active")) {
-        modal.classList.remove("modal--active");
-        modal.classList.add("modal--disabled");
-        return;
-    }
+window.addEventListener(
+  "load",
+  () => {
+    const all_btn_modals = document.querySelectorAll("[data-modal]");
 
-    // if it is active, disable the modal
-    modal.classList.remove("modal--disabled");
-    modal.classList.add("modal--active");
-};
+    all_btn_modals.forEach((btn_modal) => {
+      const modal_id = btn_modal.getAttribute("data-modal");
 
-const assing_func = (element) => {
-    element.addEventListener("click", show_modal, false);
-};
+      const btn_close_modal = getNode(modal_id).querySelector(
+        ".modal__button-close"
+      );
 
-const initModal = () => {
-    const btn_show_modal = getNode("show-modal");
-    const btn_hide_modal = getNode("close-modal");
-    const btn_exit_modal = getNode("exit-modal");
-
-    assing_func(btn_show_modal);
-    assing_func(btn_hide_modal);
-    assing_func(btn_exit_modal);
-}
-
-
-export {
-    initModal
-}
+      toggle_modal(btn_modal, modal_id);
+      toggle_modal(btn_close_modal, modal_id);
+    });
+  },
+  false
+);

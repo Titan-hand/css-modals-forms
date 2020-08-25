@@ -1,192 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>css forms</title>
-        <link rel="stylesheet" type="text/css" href="css/base.css" />
-        <link rel="stylesheet" type="text/css" href="css/modal.css" />
-        <link rel="stylesheet" type="text/css" href="css/buttons.css" />
-        <link rel="stylesheet" type="text/css" href="css/inputs.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css forms</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/inputs.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
+
+    <div class="container">
+      <div class="content">
         <h1>Ejemplo de modal con vanilla javascript y css</h1>
 
-        <button class="button button__success" id="show-modal">
-            Mostrar modal
+        <button class="button button__success" data-modal="modal1">
+          Primer modal
         </button>
 
-        <section class="modal-shadow modal--disabled" id="modal">
-            <div class="modal__content">
-                <div class="modal__header">
-                    <h2 class="modal__title">Creación de grado</h2>
+        <button class="button button__success" data-modal="modal2">
+          Modal avanzado
+        </button>
+      </div>
+    </div>
 
-                    <button class="modal__button-close" id="close-modal">
-                        <i class="fa fa-times"></i>
-                    </button>
-                </div>
-                <div class="modal__body">
-                    <div class="modal__multimedia">
-                        <img
-                            src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt="Imagen programacion"
-                            title="Imagen de programacion"
-                        />
-                    </div>
-                    <form>
-                        <p class="modal__text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Voluptatum debitis animi, voluptas minima
-                            distinctio atque quos vel officia, similique in
-                            quibusdam deserunt esse at soluta accusantium
-                            suscipit perferendis illum tempore?
-                        </p>
-                        <div class="field">
-                            <label
-                                for="nombre"
-                                class="modal__text-title"
-                                aria-labelledby="nombre"
-                                aria-label="Nombre"
-                            >
-                                Nombre
-                            </label>
-                            <input type="text" placeholder="nombre" />
-                        </div>
 
-                        <div class="field">
-                            <label
-                                for="grado"
-                                class="modal__text-title"
-                                aria-labelledby="grado"
-                                aria-label="Grado"
-                            >
-                                Grado
-                            </label>
-                            <select name="" id="grado">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                            </select>
-                        </div>
 
-                        <div class="field">
-                            <label
-                                for="mensaje"
-                                class="modal__text-title"
-                                aria-labelledby="mensaje"
-                                aria-label="Mensaje"
-                            >
-                                Mensaje:
-                            </label>
-                            <textarea
-                                placeholder="mensaje"
-                                name="mensaje"
-                                id="mensaje"
-                            ></textarea>
-                        </div>
+    <section class="modal-shadow modal--disabled" id="modal1">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__title">
+            <i class="fa fa-chalkboard-teacher title-icon"></i>
+            Creación de grado
+          </h2>
 
-                        <!-- ===== inline checkbox ===== -->
-                        <div class="field">
-                            <strong class="modal__text-title">
-                                ¿Qué manejas? - inline
-                            </strong>
-                            <div class="modal-selection">
-                                <div class="modal-selection__select">
-                                    <div class="field">
-                                        <label
-                                            for="html"
-                                            class="input-checkbox"
-                                            aria-labelledby="html"
-                                            aria-label="html"
-                                        >
-                                            <input id="html" type="checkbox" />
-                                            html
-                                        </label>
-                                    </div>
-                                </div>
+          <button class="modal__button-close">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+        <div class="modal__body">
+          <div class="modal__multimedia">
+            <iframe
+              src="https://www.youtube.com/embed/jyurLJnq148"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
 
-                                <div class="modal-selection__select">
-                                    <div class="field">
-                                        <label
-                                            for="css"
-                                            class="input-checkbox"
-                                            aria-labelledby="css"
-                                            aria-label="css"
-                                        >
-                                            <input id="css" type="checkbox" />
-                                            css
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ===== column checkbox =====  -->
-                        <div class="field">
-                            <strong class="modal__text-title">
-                                ¿Qué manejas? - column
-                            </strong>
-                            <label
-                                for="html5"
-                                class="input-checkbox"
-                                aria-labelledby="html5"
-                                aria-label="html5"
-                            >
-                                <input id="html5" type="checkbox" />
-                                html5
-                            </label>
-                                    
-                            <label
-                                for="css3"
-                                class="input-checkbox"
-                                aria-labelledby="css3"
-                                aria-label="css3"
-                            >
-                                <input id="css3" type="checkbox" />
-                                css3
-                            </label>
-                        </div>
-                        <!-- ===== input range ===== -->
-                        <div class="field"> 
-                            <strong>Cantidad:</strong>
+          <div class="modal__multimedia">
+            <img
+              src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Imagen programacion"
+              title="Imagen de programacion"
+            />
+          </div>
 
-                            <label for="cantidad" class="input-range">
-                                <input type="range" min="1" max="10" name="cantidad">
-                            </label>
-                        </div>
-
-                    </form>
-                </div>
-                <div class="modal__footer">
-                    <div class="button-group">
-                        <button
-                            class="button button__success"
-                            aria-label="crear"
-                        >
-                            Crear
-                        </button>
-
-                        <button
-                            class="button button__danger"
-                            id="exit-modal"
-                            aria-label="salir"
-                        >
-                            Salir
-                        </button>
-                    </div>
-                </div>
+          <div class="modal__multimedia">
+            <video loop controls preload="metadata">
+              <source
+                src="https://ak.picdn.net/shutterstock/videos/1013884838/preview/stock-footage-queen-elizabeth-qe-computer-learning-center-medium-shot.webm"
+                type="video/webm
+                            "
+              />
+            </video>
+          </div>
+          <form>
+            <p class="modal__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum debitis animi, voluptas minima distinctio atque quos
+              vel officia, similique in quibusdam deserunt esse at soluta
+              accusantium suscipit perferendis illum tempore?
+            </p>
+            <div class="field">
+              <label
+                for="nombre"
+                class="modal__text-title"
+                aria-labelledby="nombre"
+                aria-label="Nombre"
+              >
+                Nombre
+              </label>
+              <input type="text" placeholder="nombre" />
             </div>
-        </section>
-        <script
-            src="https://kit.fontawesome.com/7d7cc578e0.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="./js/index.mjs" type="module"></script>
-    </body>
+
+            <div class="field">
+              <label
+                for="grado"
+                class="modal__text-title"
+                aria-labelledby="grado"
+                aria-label="Grado"
+              >
+                Grado
+              </label>
+              <select name="" id="grado">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label
+                for="mensaje"
+                class="modal__text-title"
+                aria-labelledby="mensaje"
+                aria-label="Mensaje"
+              >
+                Mensaje:
+              </label>
+              <textarea
+                placeholder="mensaje"
+                name="mensaje"
+                id="mensaje"
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <strong class="modal__text-title"> ¿Qué manejas? </strong>
+              <div class="modal-selection">
+                <div class="modal-selection__select">
+                  <div class="field">
+                    <label
+                      for="html"
+                      class="input-checkbox"
+                      aria-labelledby="html"
+                      aria-label="html"
+                    >
+                      <input id="html" type="checkbox" />
+                      html
+                    </label>
+                  </div>
+                </div>
+
+                <div class="modal-selection__select">
+                  <div class="field">
+                    <label
+                      for="css"
+                      class="input-checkbox"
+                      aria-labelledby="css"
+                      aria-label="css"
+                    >
+                      <input id="css" type="checkbox" />
+                      css
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label
+                for="profesion"
+                class="modal__text-title"
+                aria-labelledby="profesion"
+                aria-label="profesion"
+                >Profesion</label
+              >
+              <input type="text" name="profesion" id="profesion" />
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <div class="button-group">
+            <button class="button button__success" aria-label="crear">
+              <i class="fa fa-save button__icon"></i>
+              Crear
+            </button>
+
+            <button
+              class="button button__danger"
+              id="exit-modal"
+              aria-label="salir"
+            >
+              <i class="fa fa-sign-out-alt button__icon"></i>
+              Salir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="modal-shadow modal--disabled" id="modal2">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__title">Creación de grado</h2>
+
+          <button class="modal__button-close">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+        <div class="modal__body">
+          <div class="modal__multimedia">
+            <iframe
+              src="https://www.youtube.com/embed/jyurLJnq148"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="modal__multimedia">
+            <img
+              src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Imagen programacion"
+              title="Imagen de programacion"
+            />
+          </div>
+
+          <div class="modal__multimedia">
+            <video loop controls preload="metadata">
+              <source
+                src="https://ak.picdn.net/shutterstock/videos/1013884838/preview/stock-footage-queen-elizabeth-qe-computer-learning-center-medium-shot.webm"
+                type="video/webm
+                              "
+              />
+            </video>
+          </div>
+          <form>
+            <p class="modal__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum debitis animi, voluptas minima distinctio atque quos
+              vel officia, similique in quibusdam deserunt esse at soluta
+              accusantium suscipit perferendis illum tempore?
+            </p>
+            <div class="field">
+              <label
+                for="nombre"
+                class="modal__text-title"
+                aria-labelledby="nombre"
+                aria-label="Nombre"
+              >
+                Nombre
+              </label>
+              <input type="text" placeholder="nombre" />
+            </div>
+
+            <div class="field">
+              <label
+                for="grado"
+                class="modal__text-title"
+                aria-labelledby="grado"
+                aria-label="Grado"
+              >
+                Grado
+              </label>
+              <select name="" id="grado">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label
+                for="mensaje"
+                class="modal__text-title"
+                aria-labelledby="mensaje"
+                aria-label="Mensaje"
+              >
+                Mensaje:
+              </label>
+              <textarea
+                placeholder="mensaje"
+                name="mensaje"
+                id="mensaje"
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <strong class="modal__text-title"> ¿Qué manejas? </strong>
+              <div class="modal-selection">
+                <div class="modal-selection__select">
+                  <div class="field">
+                    <label
+                      for="html"
+                      class="input-checkbox"
+                      aria-labelledby="html"
+                      aria-label="html"
+                    >
+                      <input id="html" type="checkbox" />
+                      html
+                    </label>
+                  </div>
+                </div>
+
+                <div class="modal-selection__select">
+                  <div class="field">
+                    <label
+                      for="css"
+                      class="input-checkbox"
+                      aria-labelledby="css"
+                      aria-label="css"
+                    >
+                      <input id="css" type="checkbox" />
+                      css
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <div class="button-group">
+            <button class="button button__success" aria-label="crear">
+              Crear
+            </button>
+
+            <button
+              class="button button__danger"
+              id="exit-modal"
+              aria-label="salir"
+            >
+              Salir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script
+      src="https://kit.fontawesome.com/7d7cc578e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="buid/app.js"></script>
+  </body>
 </html>
