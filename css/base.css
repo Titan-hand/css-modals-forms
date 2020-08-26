@@ -23,3 +23,21 @@ body {
     max-width: 1200px;
     margin: auto;
 }
+
+.title{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.desc{
+    line-height: 1.8;
+    margin: 1rem 0;
+}
+
+.loading{
+    display: flex;
+}
+
+.loading strong{
+    margin-left: -12px;
+}
