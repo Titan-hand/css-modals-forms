@@ -45,7 +45,20 @@
           <button class="button button__success" data-modal="modal2">
             Modal avanzado
           </button>
+          <button class="button button__success" data-modal="modal3">
+            Ejemplo numero 3
+          </button>
         </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Botones disponibles</h1>
+
+      <div class="button-group">
+        <button class="button button__success">Boton exitoso</button>
+        <button class="button button__danger">Boton peligroso</button>
+        <button class="button button__information">Boton informativo</button>
+        <button class="button button__warning">Boton aviso</button>
       </div>
     </div>
 
@@ -347,6 +360,164 @@
       </div>
     </section>
 
+    <section class="modal-shadow modal--disabled" id="modal3">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__title">
+            <i class="fa fa-chalkboard-teacher title-icon"></i>
+            Creación de grado
+          </h2>
+
+          <button class="modal__button-close modal__button-close--red">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+        <div class="modal__body">
+          <div class="modal__multimedia">
+            <iframe
+                    src="https://www.youtube.com/embed/jyurLJnq148"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="modal__multimedia">
+            <img
+                    src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="Imagen programacion"
+                    title="Imagen de programacion"
+            />
+          </div>
+
+          <div class="modal__multimedia">
+            <video loop controls preload="metadata">
+              <source
+                      src="https://ak.picdn.net/shutterstock/videos/1013884838/preview/stock-footage-queen-elizabeth-qe-computer-learning-center-medium-shot.webm"
+                      type="video/webm
+                            "
+              />
+            </video>
+          </div>
+          <form>
+            <p class="modal__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum debitis animi, voluptas minima distinctio atque quos
+              vel officia, similique in quibusdam deserunt esse at soluta
+              accusantium suscipit perferendis illum tempore?
+            </p>
+            <div class="field">
+              <label
+                      for="nombre"
+                      class="modal__text-title"
+                      aria-labelledby="nombre"
+                      aria-label="Nombre"
+              >
+                Nombre
+              </label>
+              <input type="text" placeholder="nombre" />
+            </div>
+
+            <div class="field">
+              <label
+                      for="grado"
+                      class="modal__text-title"
+                      aria-labelledby="grado"
+                      aria-label="Grado"
+              >
+                Grado
+              </label>
+              <select name="" id="grado">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label
+                      for="mensaje"
+                      class="modal__text-title"
+                      aria-labelledby="mensaje"
+                      aria-label="Mensaje"
+              >
+                Mensaje:
+              </label>
+              <textarea
+                      placeholder="mensaje"
+                      name="mensaje"
+                      id="mensaje"
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <strong class="modal__text-title"> ¿Qué manejas? </strong>
+              <div class="modal-selection">
+                <div class="modal-selection__select">
+                  <div class="field">
+                    <label
+                            for="html"
+                            class="input-checkbox"
+                            aria-labelledby="html"
+                            aria-label="html"
+                    >
+                      <input id="html" type="checkbox" />
+                      html
+                    </label>
+                  </div>
+                </div>
+
+                <div class="modal-selection__select">
+                  <div class="field">
+                    <label
+                            for="css"
+                            class="input-checkbox"
+                            aria-labelledby="css"
+                            aria-label="css"
+                    >
+                      <input id="css" type="checkbox" />
+                      css
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label
+                      for="profesion"
+                      class="modal__text-title"
+                      aria-labelledby="profesion"
+                      aria-label="profesion"
+              >Profesion</label
+              >
+              <input type="text" name="profesion" id="profesion" />
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <div class="button-group">
+            <button class="button button__success" aria-label="crear">
+              <i class="fa fa-save button__icon"></i>
+              Crear
+            </button>
+
+            <button
+                    class="button button__danger"
+                    id="exit-modal"
+                    aria-label="salir"
+            >
+              <i class="fa fa-sign-out-alt button__icon"></i>
+              Salir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </section>
     <script src="build/app.js"></script>
     <script
       src="https://kit.fontawesome.com/7d7cc578e0.js"
