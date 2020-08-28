@@ -117,7 +117,9 @@
               >
                 Nombre
               </label>
-              <input type="text" placeholder="nombre" />
+              <div class="field-input">
+                <input type="text" placeholder="nombre" />
+              </div>
             </div>
 
             <div class="field">
@@ -129,13 +131,15 @@
               >
                 Grado
               </label>
-              <select name="" id="grado">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-              </select>
+              <div class="field-input">
+                <select name="" id="grado">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </div>
             </div>
 
             <div class="field">
@@ -147,11 +151,13 @@
               >
                 Mensaje:
               </label>
-              <textarea
-                placeholder="mensaje"
-                name="mensaje"
-                id="mensaje"
-              ></textarea>
+              <div class="field-input">
+                <textarea
+                  placeholder="mensaje"
+                  name="mensaje"
+                  id="mensaje"
+                ></textarea>
+              </div>
             </div>
 
             <div class="field">
@@ -195,8 +201,10 @@
                 aria-label="profesion"
                 >Profesion</label
               >
-              <input type="text" name="profesion" id="profesion" />
-            </div>
+                <div class="field-input">
+                  <input type="text" name="profesion" id="profesion" />
+                </div>
+              </div>
           </form>
         </div>
         <div class="modal__footer">
@@ -271,8 +279,10 @@
               >
                 Nombre
               </label>
-              <input type="text" placeholder="nombre" />
-            </div>
+                <div class="field-input">
+                  <input type="text" placeholder="nombre" />
+                </div>
+              </div>
 
             <div class="field">
               <label
@@ -283,13 +293,15 @@
               >
                 Grado
               </label>
-              <select name="" id="grado">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-              </select>
+              <div class="field-input">
+                <select name="" id="grado">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </div>
             </div>
 
             <div class="field">
@@ -301,11 +313,13 @@
               >
                 Mensaje:
               </label>
-              <textarea
-                placeholder="mensaje"
-                name="mensaje"
-                id="mensaje"
-              ></textarea>
+              <div class="field-input">
+                <textarea
+                  placeholder="mensaje"
+                  name="mensaje"
+                  id="mensaje"
+                ></textarea>
+              </div>
             </div>
 
             <div class="field">
@@ -333,30 +347,32 @@
                       aria-labelledby="css"
                       aria-label="css"
                     >
+
                       <input id="css" type="checkbox" />
                       css
                     </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </form>
-        </div>
-        <div class="modal__footer">
-          <div class="button-group">
-            <button class="button button__success" aria-label="crear">
-              Crear
-            </button>
-
-            <button
-              class="button button__danger"
-              id="exit-modal"
-              aria-label="salir"
-            >
-              Salir
-            </button>
+          <div class="modal__footer">
+            <div class="button-group">
+              <button class="button button__success" aria-label="crear">
+                Crear
+              </button>
+              <button
+                      class="button button__danger"
+                      id="exit-modal"
+                      aria-label="salir"
+              >
+                Salir
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -373,6 +389,26 @@
           </button>
         </div>
         <div class="modal__body">
+
+          <div class="field">
+            <label for="email">Email:</label>
+
+            <div class="field-input">
+              <span class="field__addon"><i class="fa fa-envelope"></i></span>
+              <input type="text" name="email" placeholder="Put your email">
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label for="email">Email:</label>
+            <div class="field-input">
+
+              <span class="field__addon field__addon-invert"><i class="fa fa-envelope"></i></span>
+              <input type="text" name="email" placeholder="Put your email">
+            </div>
+          </div>
+
           <div class="modal__multimedia">
             <iframe
                     src="https://www.youtube.com/embed/jyurLJnq148"
@@ -415,10 +451,13 @@
               >
                 Nombre
               </label>
-              <input type="text" placeholder="nombre" />
+              <div class="field-input">
+                <input type="text" placeholder="nombre" />
+              </div>
             </div>
 
             <div class="field">
+
               <label
                       for="grado"
                       class="modal__text-title"
@@ -427,13 +466,15 @@
               >
                 Grado
               </label>
-              <select name="" id="grado">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-              </select>
+              <div class="field-input">
+                <select name="" id="grado">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </div>
             </div>
 
             <div class="field">
@@ -477,6 +518,7 @@
                             aria-labelledby="css"
                             aria-label="css"
                     >
+
                       <input id="css" type="checkbox" />
                       css
                     </label>
@@ -491,9 +533,10 @@
                       class="modal__text-title"
                       aria-labelledby="profesion"
                       aria-label="profesion"
-              >Profesion</label
-              >
-              <input type="text" name="profesion" id="profesion" />
+              >Profesion</label>
+              <div class="field-input">
+                <input type="text" name="profesion" id="profesion" />
+              </div>
             </div>
           </form>
         </div>
@@ -517,7 +560,7 @@
       </div>
     </section>
 
-    </section>
+
     <script src="build/app.js"></script>
     <script
       src="https://kit.fontawesome.com/7d7cc578e0.js"

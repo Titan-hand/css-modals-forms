@@ -12,6 +12,24 @@
 .field .field {
     margin: 0;
 }
+/*
+    -------- a container just for the inputs
+*/
+
+.field-input{
+    display: flex;
+}
+
+.field-input > input,
+.field-input > select,
+.field-input > textarea {
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    padding: .7rem;
+    display: block;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+}
 
 /*
 	-------- label inside of .field container -------- 
@@ -25,9 +43,9 @@
 /*
 	-------- inputs styles inside of .field container -------- 
 */
-.field > input,
-.field > select,
-.field > textarea {
+.field-input > input,
+.field-input > select,
+.field-input > textarea {
     border: 1px solid rgba(0, 0, 0, 0.315);
     padding: .7rem;
     display: block;
@@ -39,7 +57,7 @@
 /*
 	-------- set maximum width and height -------- 
 */
-.field textarea {
+.field-input textarea {
     max-width: 100%;
     min-width: 100%;
     min-height: 80px;
@@ -48,8 +66,8 @@
 /*
 	-------- labels styles inside of .field container -------- 
 */
-.field > .input-checkbox,
-.field > .input-radio {
+.field-input > .input-checkbox,
+.field-input > .input-radio {
     display: flex;
     align-items: center;
     padding: 2px 0;
@@ -67,7 +85,7 @@
 /*
 	-------- input type range in container -------- 
 */
-.field > .input-range {
+.field-input > .input-range {
     display: flex;
     margin: .5rem 0;
 }
@@ -75,7 +93,7 @@
 /* 
     -------- the range input --------
 */
-.field input[type="range"]{
+.field-input input[type="range"]{
     padding: 0;
     width: 100%;
 }
@@ -94,3 +112,41 @@
     background: #e4e4e4;
     margin-left: 10px;
 }
+
+/*
+    -------- Addons in the field block --------
+*/
+
+.field-input > .field__addon{
+    color: white;
+    width: 10%;
+    background-color: gray;
+    text-align: center;
+    line-height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.field-input > .field__addon + input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.field-input > .field__addon-invert{
+    order:2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.field-input > .field__addon-invert + input{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+}
+
+
+
+
