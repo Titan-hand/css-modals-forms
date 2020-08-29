@@ -13,7 +13,7 @@
     margin: 0;
 }
 /*
-    -------- a container just for the inputs
+    -------- a container just for the inputs --------
 */
 
 .field-input{
@@ -32,7 +32,7 @@
 }
 
 /*
-	-------- label inside of .field container -------- 
+	-------- label inside of .field-input container --------
 */
 .field > label {
     font-size: 90%;
@@ -41,7 +41,7 @@
 }
 
 /*
-	-------- inputs styles inside of .field container -------- 
+	-------- inputs styles inside of .field-input container --------
 */
 .field-input > input,
 .field-input > select,
@@ -64,7 +64,7 @@
 }
 
 /*
-	-------- labels styles inside of .field container -------- 
+	-------- labels styles inside of .field-input container --------
 */
 .field-input > .input-checkbox,
 .field-input > .input-radio {
@@ -118,7 +118,6 @@
 */
 
 .field-input > .field__addon{
-    color: white;
     width: 10%;
     background-color: gray;
     text-align: center;
@@ -131,7 +130,9 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-
+.field-input > .field__addon i {
+    color:white;
+}
 .field-input > .field__addon-invert{
     order:2;
     border-top-left-radius: 0;
