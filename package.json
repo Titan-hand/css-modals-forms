@@ -6,12 +6,11 @@
   "directories": {
     "doc": "docs"
   },
-
   "scripts": {
-   "build": "webpack --mode production",
-   "builddev": "webpack --watch --mode development"
- },
-
+    "build": "webpack --mode production",
+    "builddev": "webpack --watch --mode development --open", 
+    "start": "webpack-dev-server --watch --mode development --port 8080 --open"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Titan-hand/css-modals-forms.git"
@@ -26,5 +25,8 @@
   "dependencies": {
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
   }
 }

@@ -1,96 +1,110 @@
+:root {
+  --modal-shadow: #0000004f;
+  --modal-content-shadow: rgba(0, 0, 0, 0.123);
+  --modal-header-border: rgba(0, 0, 0, 0.205);
+  --modal-button-close-red: #d54062;
+  --modal-button-close-red-shadow: #a01837;
+  --modal-button-close-red-active: #c82249;
+}
 /*
 	-------- Modal commons styles -------- 
 */
 .modal__footer,
 .modal__header {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 /*
 	-------- Modal shadow -------- 
 */
 .modal-shadow {
-    position: fixed;
-    background: #0000004f;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: auto;
-    transition: all 0.2s ease;
+  position: fixed;
+  background: var(--modal-shadow);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  transition: all 0.2s ease;
 }
 
 /*
 	-------- Modal content body -------- 
 */
 .modal__content {
-    background: white;
-    padding: 2.5rem;
-    width: 650px;
-    border-radius: 0.5rem;
-    border: 1px solid #eee;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.123);
+  background: white;
+  padding: 2.5rem;
+  width: 650px;
+  border-radius: 0.5rem;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px var(--modal-content-shadow);
 }
 
 /*
 	-------- Modal header with titles -------- 
 */
 .modal__header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--modal-header-border);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5em;
 }
 
 /*
 	-------- Modal header close button -------- 
 */
 .modal__button-close {
-    margin-left: auto;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 1.5rem;
-    cursor: pointer;
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .modal__button-close i {
-    transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .modal__button-close:hover i {
-    color: black;
-    font-size: 1.6rem;
+  color: black;
+  font-size: 1.6rem;
 }
-
-
 
 /*
     -------- Modal header close red button --------
 */
 
-.modal__button-close--red{
-    background-color: #D54062;
-    padding: 10px 20px;
-    border-radius: 100%;
-    box-shadow: 0 4px 0 2px #a01837;
-    transition-property: transform, box-shadow;
-    transition-duration:.1s;
-
+.modal__button-close--red {
+  background-color: var(--modal-button-close-red);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  box-shadow: 0 4px 0 2px var(--modal-button-close-red-shadow);
+  transition-property: transform, box-shadow;
+  transition-duration: 0.1s;
+  font-size: 18px;
 }
 
-.modal__button-close--red:hover{
-    transform: scale(1.06);
+.modal__button-close--red i {
+  color: white;
 }
 
-.modal__button-close--red:active{
-    transform:translateY(10%);
-    box-shadow:0px 0px #C82249;
+.modal__button-close--red:hover i {
+  font-size: 18px;
+  color: white;
+}
+
+.modal__button-close--red:active {
+  transform: translateY(10%);
+  box-shadow: 0px 0px var(--modal-button-close-red-active);
 }
 
 /*
@@ -103,17 +117,17 @@
 	-------- Modal body content -------- 
 */
 .modal__body {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /*
 	-------- Modal img container -------- 
 */
-.modal__multimedia{
-    position: relative;
-    width: 100%;
+.modal__multimedia {
+  position: relative;
+  width: 100%;
 }
 
 .modal__multimedia img,
@@ -121,23 +135,23 @@
 .modal__multimedia figure,
 .modal__multimedia picture,
 .modal__multimedia iframe {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    margin-bottom: 1rem;
-    border-radius: 5px;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 5px;
 }
 
-.modal__multimedia iframe{
-    min-height: 400px;
+.modal__multimedia iframe {
+  min-height: 400px;
 }
 
 /*
 	-------- Modal text content-------- 
 */
 .modal__text {
-    font-weight: 300;
-    line-height: 1.8;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 /*
@@ -150,65 +164,65 @@
 	-------- Modal multiple selects  -------- 
 */
 .modal-selection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 /*
 	-------- Modal selection children -------- 
 */
 .modal-selection > .modal-selection__select:not(:last-child) {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 /*
 	-------- Modal the title of sections -------- 
 */
 .modal__text-title {
-    margin-bottom: 1rem;
-    font-weight: 700;
-    font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /*
 	-------- Displays modal -------- 
 */
 .modal--active {
-    opacity: 1;
-    display: flex;
+  opacity: 1;
+  display: flex;
 }
 
 .modal--disabled {
-    opacity: 0;
-    z-index: -1; /*para que no bloquee los demas elementos del DOM*/
+  opacity: 0;
+  z-index: -1; /*para que no bloquee los demas elementos del DOM*/
 }
 
 @media screen and (max-width: 480px) {
-    .modal-shadow {
-        padding: 0;
-    }
+  .modal-shadow {
+    padding: 0;
+  }
 
-    .modal__title {
-        text-align: center;
-        width: 100%;
-    }
+  .modal__title {
+    text-align: center;
+    width: 100%;
+  }
 
-    .modal__content {
-        width: 100%;
-        min-height: 100%;
-        border-radius: 0;
-    }
+  .modal__content {
+    width: 100%;
+    min-height: 100%;
+    border-radius: 0;
+  }
 
-    .button-group {
-        flex-direction: column;
-    }
+  .button-group {
+    flex-direction: column;
+  }
 
-    body .button-group > .button:not(:last-child) {
-        margin-right: 0;
-    }
+  body .button-group > .button:not(:last-child) {
+    margin-right: 0;
+  }
 
-    .button-group > .button {
-        margin: 0.5rem 0;
-    }
+  .button-group > .button {
+    margin: 0.5rem 0;
+  }
 }
