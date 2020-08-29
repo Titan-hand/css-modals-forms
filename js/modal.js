@@ -5,8 +5,9 @@ import toggle_modal from "./utils/toggle_modal";
 window.addEventListener(
   "load",
   () => {
+    console.log('xd   '); 
     const all_btn_modals = document.querySelectorAll("[data-modal]");
-
+     
     all_btn_modals.forEach((btn_modal) => {
       // get id of modal for button action
       const modal_id = btn_modal.getAttribute("data-modal");
@@ -20,5 +21,6 @@ window.addEventListener(
       toggle_modal(btn_close_modal, modal_id);
     });
   },
-  false
+  false 
 );
+ 

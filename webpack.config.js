@@ -11,4 +11,11 @@ module.exports = {
   entry: {
     main: "./js/index.js",
   },
+
+  devServer: {
+    compress: true,
+
+    watchContentBase: true,
+    port: 8080
+  },
 };

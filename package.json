@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "builddev": "webpack --watch --mode development --open", 
-    "start": "webpack-dev-server --watch --mode development --port 8080 --open"
+    "builddev": "webpack --watch --mode development",
+    "start": "webpack-dev-server --watch --mode development --open"
   },
   "repository": {
     "type": "git",
