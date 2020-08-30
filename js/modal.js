@@ -1,25 +1,27 @@
 // utils
-import getNode from "./utils/get_id";
+import getNode, { getQueryAllNode } from "./utils/get_elements";
 import toggle_modal from "./utils/toggle_modal";
 
 window.addEventListener(
   "load",
   () => {
-    const all_btn_modals = document.querySelectorAll("[data-modal]");
-     
+    const all_btn_modals = getQueryAllNode("[data-modal]");
+
     all_btn_modals.forEach((btn_modal) => {
       // get id of modal for button action
       const modal_id = btn_modal.getAttribute("data-modal");
 
-      // get the HTML button of modal with id: modal_id
-      const btn_close_modal = getNode(modal_id).querySelector(
-        ".modal__button-close"
-      );
+      const btns_exit_modal = [
+        ...getQueryAllNode(`#${modal_id} *[data-close='${modal_id}']`),
+      ];
 
+      btns_exit_modal.forEach((btn_exit_modal) => {
+        toggle_modal(btn_exit_modal, modal_id);
+      });
+      
       toggle_modal(btn_modal, modal_id);
-      toggle_modal(btn_close_modal, modal_id);
+
     });
   },
-  false 
+  false
 );
- 

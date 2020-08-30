@@ -191,6 +191,7 @@
 .modal--active {
   opacity: 1;
   display: flex;
+  z-index: 99999;
 }
 
 .modal--disabled {
